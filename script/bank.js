@@ -15,6 +15,21 @@ id="withdraw-field"
 id="btn-withdraw" 
 */
 
+document.getElementById("deposite-field").addEventListener("keyup", function (event) {
+  const text = event.target.value;
+  console.log(text);
+
+  const btnDeposite = document.getElementById("btn-deposite");
+
+  if (text.length == 0) {
+    // btnDeposite.setAttribute("disabled");
+    // prompt("Please enter a number");
+    alert("Are you feeling lucky");
+  } else {
+    btnDeposite.removeAttribute("disabled");
+  }
+});
+
 // add event listeners to the deposite button
 document.getElementById("btn-deposite").addEventListener("click", function () {
   console.log("deposite btn clicked");
@@ -78,3 +93,18 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
 });
 
 console.log("working");
+
+document.getElementById("withdraw-field").addEventListener("keyup", function (event) {
+  const text = event.target.value;
+  console.log(text);
+
+  const btnWithdraw = document.getElementById("btn-withdraw");
+
+  if (text.length == 0) {
+    // btnDeposite.setAttribute("disabled");
+    // prompt("Please enter a number");
+    alert("Are you feeling lucky");
+  } else {
+    btnWithdraw.removeAttribute("disabled");
+  }
+});
